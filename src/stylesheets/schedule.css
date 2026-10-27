@@ -1,0 +1,384 @@
+.filters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.filter__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.filter__field {
+  position: relative;
+  cursor: pointer;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.filter__value {
+  pointer-events: none;
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.filter__arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -4px;
+  transition: transform 0.2s;
+}
+
+.week {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--soft);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.week__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.week__month {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.week__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.week__range {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.week__btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  color: var(--ink);
+  transition: background 0.2s;
+}
+
+.week__btn:hover {
+  background: var(--white);
+}
+
+.table {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table__row {
+  display: grid;
+  grid-template-columns: 72px repeat(7, 1fr);
+}
+
+.table__head {
+  height: 56px;
+}
+
+.table__corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8a8a8a;
+}
+
+.table__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  color: #36313e;
+}
+
+.table__day--today {
+  background: #ece5fa;
+  color: #61409b;
+}
+
+.table__time {
+  padding-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8a8a8a;
+}
+
+.table__cell {
+  min-height: 104px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 0.5px #f2f2f2;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  border: 0;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.event--roomy {
+  gap: 5px;
+}
+
+.event__title {
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+.event__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.event__tag {
+  white-space: nowrap;
+  align-self: flex-start;
+  padding: 0 7px;
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.event--dance {
+  background: #f1fdb0;
+  color: #526600;
+}
+
+.event--yoga {
+  background: #fbe0f3;
+  color: #b22480;
+}
+
+.event--pilates {
+  background: #e8e0fa;
+  color: #5426b2;
+}
+
+.event--dance .event__tag {
+  background: #7a9400;
+}
+
+.event--yoga .event__tag {
+  background: #eda3e8;
+}
+
+.event--pilates .event__tag {
+  background: #6426ea;
+}
+
+.event--off {
+  visibility: hidden;
+}
+
+.popup {
+  position: absolute;
+  z-index: 5;
+  width: 278px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(46, 31, 66, 0.14);
+}
+
+.popup__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__title {
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+.popup__close {
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 32px;
+  color: #8b8593;
+  cursor: pointer;
+}
+
+.popup__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #625a6b;
+}
+
+.popup__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.popup__btn {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.schedule-end {
+  height: 70px;
+}
+
+@media (max-width: 1100px) {
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .week__month {
+    font-size: 28px;
+  }
+  .table {
+    overflow-x: auto;
+  }
+  .table__row {
+    min-width: 960px;
+  }
+}
+
+@media (max-width: 760px) {
+  .week__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .week__nav {
+    flex-wrap: wrap;
+  }
+}
+
+.filter__field--open {
+  border-color: var(--ink);
+}
+
+.filter__field--open .filter__arrow {
+  transform: rotate(180deg);
+}
+
+.filter__menu {
+  position: absolute;
+  z-index: 20;
+  left: -1px;
+  right: -1px;
+  top: calc(100% + 6px);
+  padding: 6px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(23, 23, 23, 0.16);
+}
+
+.filter__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter__option:hover {
+  background: var(--soft);
+}
+
+.filter__option--on {
+  font-weight: 600;
+  background: var(--lime);
+}
+
+.filter__option--on:hover {
+  background: var(--lime);
+}
+
+.table--picked .table__day--today {
+  background: none;
+  color: #36313e;
+}
+
+.table .table__day--dance {
+  background: #f1fdb0;
+  color: #526600;
+}
+
+.table .table__day--yoga {
+  background: #fbe0f3;
+  color: #b22480;
+}
+
+.table .table__day--pilates {
+  background: #e8e0fa;
+  color: #5426b2;
+}
+
+.week__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}

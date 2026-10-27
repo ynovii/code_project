@@ -8,7 +8,9 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/javascripts/index.js'
+    schedule: './src/javascripts/schedule.js',
+    prices: './src/javascripts/prices.js',
+    booking: './src/javascripts/booking.js'
   },
   output: {
     filename: '[name].js',
@@ -17,12 +19,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.js$/i,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
+            presets: ['@babel/preset-env']
           }
         }
       },

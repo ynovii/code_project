@@ -1,22 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+    <title>Расписание — dance fit space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <h1>Главная</h1>
+    <div class="menu">
+      <div class="wrap">
+        <a class="menu__logo" href="#">dance fit space</a>
+        <div class="menu__nav">
+          <a class="menu__link" href="#">направления</a>
+          <a class="menu__link menu__link--active" href="index.html">расписание</a>
+          <a class="menu__link" href="#">преподаватели</a>
+          <a class="menu__link" href="#">мы</a>
+          <a class="menu__link" href="pages/prices.html">абонементы</a>
+        </div>
+        <a class="menu__button" href="pages/booking.html">Записаться</a>
+      </div>
+    </div>
 
-    <h2>Категории</h2>
-    <ul>
-      <li><a href="pages/articles.html">Статьи</a></li>
-      <li><a href="pages/tests.html">Тесты</a></li>
-      <li><a href="pages/dictionary.html">Словарь</a></li>
-    </ul>
-    <h3>Статьи</h3>
-    <a href="pages/articles/plants.html">Статья №1</a>
-    <h3>Тесты</h3>
-    <a href="pages/tests/test1.html">Тест №1</a>
+    <div class="head">
+      <div class="wrap">
+        <div class="head__title">Расписание занятий</div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="filters">
+        <div class="filter">
+          <label class="filter__label">Направление</label>
+          <div class="filter__field">
+            <div class="filter__value" id="v-dir">Все</div>
+            <svg class="filter__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M1 1.5l5 5 5-5"
+                stroke="#8a8a8a"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="filter__menu" id="f-dir" hidden></div>
+          </div>
+        </div>
+        <div class="filter">
+          <label class="filter__label">Возраст</label>
+          <div class="filter__field">
+            <div class="filter__value" id="v-age">Все возрасты</div>
+            <svg class="filter__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M1 1.5l5 5 5-5"
+                stroke="#8a8a8a"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="filter__menu" id="f-age" hidden></div>
+          </div>
+        </div>
+        <div class="filter">
+          <label class="filter__label">Преподаватель</label>
+          <div class="filter__field">
+            <div class="filter__value" id="v-trainer">Все преподаватели</div>
+            <svg class="filter__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M1 1.5l5 5 5-5"
+                stroke="#8a8a8a"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="filter__menu" id="f-trainer" hidden></div>
+          </div>
+        </div>
+        <div class="filter">
+          <label class="filter__label">Настроение</label>
+          <div class="filter__field">
+            <div class="filter__value" id="v-mood">Все</div>
+            <svg class="filter__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M1 1.5l5 5 5-5"
+                stroke="#8a8a8a"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="filter__menu" id="f-mood" hidden></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week__top">
+          <div class="week__month" id="month">Октябрь</div>
+          <div class="week__nav">
+            <div class="week__range" id="range">Неделя</div>
+            <button class="week__btn" id="prev" type="button">← Предыдущая</button>
+            <button class="week__btn" id="next" type="button">Следующая →</button>
+          </div>
+        </div>
+
+        <div class="table" id="table"></div>
+      </div>
+      <div class="schedule-end"></div>
+    </div>
+
+    <div class="footer">
+      <div class="wrap">
+        <div>
+          <div class="footer__brand">dance fit space</div>
+          <div class="footer__about">
+            Пространство движения для
+            <br />
+            детей, подростков и взрослых.
+          </div>
+        </div>
+        <div>
+          <div class="footer__title">Разделы</div>
+          <a class="footer__link" href="#">Направления</a>
+          <a class="footer__link" href="index.html">Расписание</a>
+          <a class="footer__link" href="#">Преподаватели</a>
+          <a class="footer__link" href="#">Мы</a>
+          <a class="footer__link" href="pages/prices.html">Абонементы</a>
+        </div>
+        <div>
+          <div class="footer__title">Контакты</div>
+          <a class="footer__link" href="tel:+79200112777">+7 (920) 011-27-77</a>
+          <a class="footer__link" href="#">Казанское шоссе, 8к2</a>
+        </div>
+        <div>
+          <div class="footer__title">Социальные сети</div>
+          <a class="footer__link" href="https://vk.ru/dancefitspace">ВКонтакте</a>
+          <a class="footer__link" href="https://www.instagram.com/dancefitspace/">Instagram</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
