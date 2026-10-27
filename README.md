@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dance Fit Space — прототип сайта (webpack)
 
 Три страницы по макету Figma, у каждой свой HTML, JS и CSS:
@@ -19,3 +20,6 @@ yarn
 yarn start
 yarn build
 ```
+=======
+dance fit space
+>>>>>>> origin/main
