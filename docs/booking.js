@@ -165,7 +165,7 @@ function pickedText() {
   var parts = [f.id === 'unknown' ? 'Пока не знаю' : f.name];
   if (detail) parts.push(detail);
   if (d && !params.get('date')) parts.push(d.name);
-  return parts.join(' · ');
+  return parts.join(', ');
 }
 $('go2').addEventListener('click', function () {
   $('picked').textContent = pickedText();
